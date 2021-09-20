@@ -100,7 +100,7 @@ And my result showed:
 	]
 }
 ```
-I only needed the `"StreetAddress"`, `"Latitude"`, and `"Longitude"` part, so I set a new Array, and write only address and latLong into it. Because the `"InputAddress" :
+I only needed the `"StreetAddress"`, `"Latitude"`, and `"Longitude"` part, so I set a new variable, and write only `address` and `latLong` into it. Because the `"InputAddress" :
 		{
 		"StreetAddress" : "252 West 46th Street ",
 		"City" : "New York",
