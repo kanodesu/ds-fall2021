@@ -142,12 +142,12 @@ Then my result was correct:
 	}
 },
 ```
-Finally, I wrote the result into a text file `json`
+Finally, I wrote the result into a `json` file.
 ```javascript
 fs.writeFileSync('/home/ec2-user/environment/week3/m04-data.json', JSON.stringify(meetingsData));
 ```
 
 #### Submission:
 1. My `js` file: [week3.js](https://github.com/kanodesu/ds-fall2021/blob/master/week3/week3.js)
-1. My `txt` file: [m04-data.json](https://github.com/kanodesu/ds-fall2021/blob/master/week3/m04-data.json)
+1. My `json` file: [m04-data.json](https://github.com/kanodesu/ds-fall2021/blob/master/week3/m04-data.json)
 1. My repository `URL` : [week3](https://github.com/kanodesu/ds-fall2021/tree/master/week3)
