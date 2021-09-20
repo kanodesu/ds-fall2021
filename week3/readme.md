@@ -1,4 +1,6 @@
-### Weekly Assignment 2
+### Weekly Assignment 3
+
+
 
 #### Assignment:
 1. Continue work on the file you parsed in Weekly Assignment 2. If you haven't already, organize your data into a mixture of Objects and Arrays that can be [‘parsed’ and ‘stringified’](https://nodejs.org/en/knowledge/javascript-conventions/what-is-json/) as [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) so that it will be easier to access the data for your work on this assignment. Since you’ll be assembling a list of many results, your best bet is to first create an (empty) array and then add items to it one at a time. You can use the Array object’s [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method for this.
