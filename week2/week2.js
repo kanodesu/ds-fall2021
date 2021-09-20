@@ -16,7 +16,8 @@ $('td').each(function(i, ele) {
         $(ele).find('span').remove();
         $(ele).find('div').remove();
         $(ele).find('b').remove();
-        address+=$(ele).text().trim('')+"\n";
+        address+=$(ele).html().split('<br>')[2].trim().split(',')[0];
+        
     }
 });
 
