@@ -9,7 +9,7 @@ Using Excel, populate a dummy table(s) with ***ALL*** the data from the first th
 
 
 #### Process:
-I first used Excel to put all data from the first three rows Of Zone 4. I decided to organize these data in four different tables, Group, Location, Meeting, and Type.
+I first used Excel to put all data from the first three rows of Zone 4. I decided to organize these data in four different tables, Group, Location, Meeting, and Type.
 
 I used the Star Schema mode to do the schema design.(reference: [6 Database Schema Designs and How to Use Them](https://www.xplenty.com/blog/database-schema-examples/) ). 
 I had the Meeting table in the middle as a "fact", and other three tables as "dimentions" which are descriptions of that fact.
