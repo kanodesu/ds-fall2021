@@ -14,7 +14,7 @@ I decided to make a blog to record my sleep quality with wake up time, sleep tim
 ![(non)schema](https://github.com/kanodesu/ds-fall2021/blob/master/week5/week5.png "(non)schema")
 
 #### Submission:
-1. My `xlsx` file: [DummyData.xlsx](https://github.com/kanodesu/ds-fall2021/blob/master/week4/DummyData.xlsx)
+1. My `word` file: [01.docx](https://github.com/kanodesu/ds-fall2021/blob/master/week5/01.docx)  [02.docx](https://github.com/kanodesu/ds-fall2021/blob/master/week5/02.docx) [03.docx](https://github.com/kanodesu/ds-fall2021/blob/master/week5/03.docx)
 1. My (non)schema design: [week5.pdf](https://github.com/kanodesu/ds-fall2021/blob/master/week5/week5.pdf)
 
 
