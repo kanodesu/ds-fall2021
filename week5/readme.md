@@ -11,7 +11,7 @@ Using Word, populate three dummy NoSQL database entries that represent various p
 
 #### Process:
 I decided to make a blog to record my sleep quality with wake up time, sleep time and the total hours that I slept each day.
-![(non)schema](hhttps://github.com/kanodesu/ds-fall2021/blob/master/week5/week5.pdf "(non)schema")
+![(non)schema](https://github.com/kanodesu/ds-fall2021/blob/master/week5/week5.png "(non)schema")
 
 #### Submission:
 1. My `xlsx` file: [DummyData.xlsx](https://github.com/kanodesu/ds-fall2021/blob/master/week4/DummyData.xlsx)
