@@ -67,7 +67,7 @@ async.eachSeries(blogEntries, function(value, callback) {
 ```
 
 ### Result:
-![result.png](https://github.com/kanodesu/ds-fall2021/blob/master/week5.2/result.png "result.png")
+![result.png](https://github.com/kanodesu/ds-fall2021/blob/master/week5.2/result1.png "result.png")
 
 ### Submission:
 1. My `js` file: [week5.js](https://github.com/kanodesu/ds-fall2021/blob/master/week5.2/week5.js) [03.docx](https://github.com/kanodesu/ds-fall2021/blob/master/week5/03.docx)
