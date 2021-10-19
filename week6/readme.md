@@ -53,7 +53,7 @@ For part two of this assignment, write and execute a NoSQL query for your Dear D
 
 ### Process:
 
-I modified the code in week5.2, and set my `user name` as the primary key, and `date` as the sort key. Since there is only one user in my table, I query the blogs by changing the date.
+I modified the code in week5.2 [newweek5.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/newweek5.js) , and set my `user name` as the primary key, and `date` as the sort key. Since there is only one user in my table, I query the blogs by changing the date.
 
 ```javascript
 var params = {
