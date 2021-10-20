@@ -73,6 +73,8 @@ var params = {
 I only got a result like this. I think there might be some problems in my code, but I can't figure it out...
 ![result.png](https://github.com/kanodesu/ds-fall2021/blob/master/week6/result-2.png "result.png")
 
+After the one-on-one check during the class, I noticed that I uesd uppercase letter "W" in my name in the table, but in the cade, I used lowercase letter "w". I modified the code and let them be the same, and I got the right result.
+![result.png](https://github.com/kanodesu/ds-fall2021/blob/master/week6/result-new.png "result.png")
 
 ### Submission:
 1. My `js` files: [week6-1.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/week6-1.js)  [week6-2.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/week6-2.js)  
