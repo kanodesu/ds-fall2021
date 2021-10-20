@@ -77,7 +77,7 @@ After the one-on-one check during the class, I noticed that I uesd uppercase let
 ![result.png](https://github.com/kanodesu/ds-fall2021/blob/master/week6/result-new.png "result.png")
 
 ### Submission:
-1. My `js` files: [week6-1.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/week6-1.js)  [week6-2.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/week6-2.js)  
+1. My `js` files: [week6-1.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/week6-1.js)  [week6-2-new.js](https://github.com/kanodesu/ds-fall2021/blob/master/week6/week6-2-new.js)  
  
 
 
