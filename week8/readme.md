@@ -16,3 +16,12 @@ On the left, it will be a map of Manhattan.
 * For that mapping, what needs to be done to the data? Be specific and clear. Will it require filtering, aggregation, restructuring, and/or something else? How will this be done?  
 * What is the default view (if any)?  
 * What assumptions are you making about the user?  
+
+
+
+#### 02 Process Blog
+![02.png](https://github.com/kanodesu/ds-fall2021/blob/master/week8/02.png "result.png")
+
+
+#### 03 Temperature Sensor
+![03.png](https://github.com/kanodesu/ds-fall2021/blob/master/week8/03.png "result.png")
