@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Wenqin's Process Blog</title>
+  <meta name="description" content="Wenqin's Process Blog">
+  <meta name="author" content="Wenqin Lu">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+    <style>
+    * {
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+    body {
+        background-color: #1C2B34;
+        font-family: "Montserrat";
+        color: #FFEEB4;
+      }
+     
+    h1{
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
+    }
+    
+    h3{
+    font-size: 1rem;
+    text-align: center;
+    }
+    
+    p{
+    font-size: 1.5rem;
+    text-align: center;
+    }
+    
+    #myEntries{
+    padding-left: 25rem;
+    padding-right: 0.5em;
+    }
+
+    #myEntries tr:hover {background-color: #334651;}
+    
+    #myEntries th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+
+}
+#myEntries td, #myEntries th {
+  border: 1px solid #FFEEB4;
+  padding: 8px;
+}
+
+    
+  </style>
+
+</head>
+
+<body>
+
+<script>
+var data = {{{pbdata}}} ; 
+
+var myTable = '<table><thead><tr><th>user</th><th>date</th><th>happy</th><th>sleep_time</th><th>wake_up_time</th><th>total_hours</th></tr></thead><tbody>';
+
+for (var i=0; i < data.length; i++) {
+	myTable += '<tr class class="content">';
+	myTable += '<td>' + data[i].user.S + '</td>';
+	myTable += '<td>' + data[i].dt.N + '</td>';
+	myTable += '<td>' + data[i].happy.BOOL + '</td>';
+	myTable += '<td>' + data[i].wake_up_time.S + '</td>';
+	myTable += '<td>' + data[i].sleep_time.S + '</td>';
+	myTable += '<td>' + data[i].total_hours.N + '</td>';
+	myTable += '</tr>';
+
+}
+
+myTable += '</body></table>'
+
+$(window).on('load', function() {
+  $("#myEntries").html(myTable)
+});
+
+</script>
+
+<h1>Wenqin's process blog</h1>
+<br><br>
+<h3>This process blog recorded the time I slept, and the total hours.
+<br>I requested all the days with the boolean "happy" = "ture".</h3>
+<br><br><br><br>
+
+<div id='myEntries'></div>
+<br><br><br><br>
+<p><span class="blinking">Please sleep earlier!</span></p>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+</body>
+</html>

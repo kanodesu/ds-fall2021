@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AA Meetings</title>
+  <meta name="description" content="Meetings of AA in Manhattan">
+  <meta name="author" content="AA">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+       crossorigin=""/>
+       <style>
+       * {
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+    body {
+        background-color: #2D3336;
+        font-family: "Montserrat";
+        color: #a9dbef;
+      }
+      
+       #mapid{
+    width: 1200;
+    height: 500;
+    margin: 0 auto;
+    }
+    
+    #filter {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+    #filter select {
+    color: #a9dbef
+  font-family: "Montserrat", sans-serif;
+}
+
+    
+    h1{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    }
+       </style>
+</head>
+    
+<body>
+<h1>AA Meetings</h1>
+<div id="filter" style="width:300px;">
+      <label for="days">Select A Day: </label>
+      <select name="days" id="days">
+        <option value="Sundays">Sunday</option>
+        <option value="Mondays">Monday</option>
+        <option value="Tuesdays">Tuesday</option>
+        <option value="Wednesdays">Wednesday</option>
+        <option value="Thursdays">Thursday</option>
+        <option value="Fridays">Friday</option>
+        <option value="Saturdays">Saturday</option>
+      </select>
+
+      <button onclick="applyFilter()">Go</button>
+    </div>
+  <br><br>
+    
+<div id="mapid"></div>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   
+<script>
+    var data = {{{aadata}}};
+  
+
+    var mymap = L.map('mapid').setView([40.744,-73.946], 12);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+    tileSize: 512,
+    maxZoom: 18,
+    zoomOffset: -1,
+    id: 'luw954/ckx4k706t33vn14plchghw3s6',
+        accessToken: 'pk.eyJ1IjoibHV3OTU0IiwiYSI6ImNreDRqYjE0YTIxY3Uyc282Njc3N2dvMWUifQ.R3x7V8qBlbmLiS2BlOEw3w'
+    }).addTo(mymap);
+    
+    markerLayer = L.layerGroup().addTo(mymap);
+
+    for (var i=0; i<data.length; i++) {
+        L.marker( [data[i].latitude, data[i].longitude] ).bindPopup("<h3>" + data[i].name + "</h3>" +"<b>Group: </b>" +  data[i].group_name + "<br><b>Location: </b>" +  data[i].street_address + "<br><b>Days: </b>" +  data[i].days + "<br /><b>Time: </b>" + data[i].start_time + "-" + data[i].end_time + "<br /> <b>Wheelchair: </b>" + data[i].wheelchair_access + "<br /> <b>Meeting Type: </b>" + data[i].meeting_type + "<br /> <b>Special Interests: </b>" + data[i].special_interests).addTo(mymap);
+    }
+    
+    
+    function filterData(days){
+    var dd = [];
+
+    for (let i=0; i<data.length; i++){
+        if (data[i].days == days) {
+          dd.push(data[i]);
+        }
+    }
+
+    return dd;
+  }
+
+  function removeMarker(){
+    if ( markerLayer !== undefined){ mymap.removeLayer(markerLayer);}
+  }
+  
+  async function applyFilter(){
+    var d = document.getElementById("days");
+    var day = d.options[d.selectedIndex].value; 
+    
+    await removeMarker();
+    markerLayer = L.layerGroup().addTo(mymap);
+
+    var data = await filterData(days);
+    
+    //add new markers
+    for (var i=0; i<data.length; i++) {
+        L.marker( [data[i].latitude, data[i].longitude] ).bindPopup("<b>Group: </b>" +  data[i].group_name + "<br><b>Location: </b>" +  data[i].street_address + "<br><b>Days: </b>" +  data[i].days + "<br /><b>Time: </b>" + data[i].start_time + "-" + data[i].end_time + "<br /> <b>Wheelchair: </b>" + data[i].wheelchair_access + "<br /> <b>Meeting Type: </b>" + data[i].meeting_type + "<br /> <b>Special Interests: </b>" + data[i].special_interests).addTo(mymap);
+    }
+    
+  } 
+  
+  
+    </script>
+    </body>
+    </html>
+    
+   
+  
+   
